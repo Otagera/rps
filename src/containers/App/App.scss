@@ -1,0 +1,130 @@
+.App {
+  text-align: center;
+  min-height: 100vh;
+  background-image: linear-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+
+  main{
+      padding-top: 50px;
+    .Title{
+      display: grid;
+      grid-template-columns: 0.3fr 1fr 0.3fr;
+      grid-template-rows: 1fr;
+      margin: 0 auto 0;
+      width: 75%;
+      border: 2px solid hsl(217, 16%, 45%);
+      border-radius: 10px;
+      font-weight: 700;
+      height: 85px;
+
+      .Stack{
+        text-align: left;
+        padding: 5px 15px 5px;
+        display: flex;
+        flex-direction: column;
+        font-size: 20px;
+        color: white;
+      }
+      .Score {
+        border-radius: 10px;
+        padding-top: 5px;
+        margin: 10px;
+        grid-column: 3 / 4;
+        background-color: white;
+
+        p{
+          &:nth-of-type(1) {
+            color: hsl(229, 64%, 46%);
+          }
+          &:nth-of-type(2) {
+            color: hsl(229, 25%, 31%);
+            font-size: 30px;
+          }
+        }
+      }
+      p{
+        padding: 0;
+        margin: 0;
+      }
+    }
+    .Test {
+      background: url('../../assets/icon-close.svg');
+      background-repeat: no-repeat;
+      height: 100px;
+      width: 100px;
+    }
+    .MainGame{
+      display: grid;
+      grid-template-rows: 1fr 0.2fr 1fr;
+      grid-template-columns: repeat(7, 0.3fr);
+      margin: 0 auto 0;
+      width: 55%;
+
+      .GameOption{
+        display: block;
+        height: 140px;
+        width: 140px;
+        background-color: white;
+        border-radius: 50%;
+        position: relative;
+        z-index: 5;
+        box-shadow: 
+          inset 0px 5px 0px hsl(230, 89%, 82%),
+          0px 10px 5px hsl(230, 89%, 62%);
+
+        &:nth-of-type(1) {
+          grid-column: 1 / 4;
+          grid-row: 1 / 2;
+          border: 20px solid hsl(230, 89%, 62%);
+          /*box-shadow: 0 8px 6px -6px hsl(230, 89%, 65%);*/
+        }
+        &:nth-of-type(2) {
+          grid-column: 3 / 6;
+          grid-row: 3 / 4;
+          border: 20px solid hsl(349, 71%, 52%); 
+        }
+        &:nth-of-type(3) {
+          grid-column: 5 / 8;
+          grid-row: 1 / 2;
+          border: 20px solid hsl(39, 89%, 49%); 
+        }
+        & div{
+          margin: 20% auto 20%;
+          height: 60%;
+          width: 60%;
+        }
+
+        .Paper{          
+          background: url('../../assets/icon-paper.svg');
+          background-repeat: no-repeat;
+        }
+        .Rock{          
+          background: url('../../assets/icon-rock.svg');
+          background-repeat: no-repeat;
+        }
+        .Scissors{          
+          background: url('../../assets/icon-scissors.svg');
+          background-repeat: no-repeat;
+        }
+      }
+    }
+  }
+}
+.Button {
+  border-radius: 5px;
+  width: 150px;
+  height: 30px;
+
+  &.Transparent {
+    background-color: transparent;
+    outline: white;
+    color: white;
+  }
+  &.White {
+    background-color: white;
+    outline: white;
+    color: hsl(214, 47%, 23%);
+  }
+  &:hover{
+    color: hsl(349, 71%, 52%);
+  }
+}
