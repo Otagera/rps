@@ -10,7 +10,7 @@ const title = ( props )=>{
 			</div>
 			<div className='Score'>
 				<p>SCORE</p>
-				<p>12</p>
+				<p>{props.score}</p>
 			</div>
 		</div>
 	);
